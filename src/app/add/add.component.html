@@ -1,0 +1,43 @@
+<div style="background-color: powderblue;">
+  <div style="background-color: #333;">
+    <h2 style="color: white;">Add a new journey : </h2>
+  </div>
+  <br>
+  <hr>
+  <div>
+    <form (ngSubmit)="addNow()">
+          <label for="name"><b>Name : </b></label>
+          <input type="text" placeholder="Enter Name" [(ngModel)]="travel.name" 
+          name="name" required><br>
+
+          <label for="start_date"><b>Start-date : </b></label>
+          <input type="date" placeholder="Enter Start-date" [(ngModel)]="travel.start_date" 
+          name="start_date" required><br>
+
+          <label for="end_date"><b>End-date : </b></label>
+          <input type="date" placeholder="Enter End-date" [(ngModel)]="travel.end_date" 
+          name="end_date" required><br>
+
+          <label for="departure_country"><b>Departure Country : </b></label>
+          <input type="text" placeholder="Enter Departure Country" [(ngModel)]="travel.departure_country" 
+          name="departure_country" required><br>
+
+          <label for="destination_country"><b>Destination Country : </b></label>
+          <input type="text" placeholder="Enter Destination Country" 
+          [(ngModel)]="travel.destination_country" name="destination_country" required><br>
+          <br>
+          
+          <button style="background-color:#333;font-size:medium;color: white;" 
+          type="submit" class="addbtn" >Add</button><br>
+    </form>
+  </div>
+  <br>
+  <div>
+      <form (ngSubmit)="connect()">
+        <button type="submit" style="font-size: medium;">Cancel</button>
+      </form>
+  </div>
+  <br>
+  <div><p>{{message}}</p></div>
+</div>
+

@@ -1,0 +1,46 @@
+<div style="background-color: powderblue;">
+  <div style="background-color: #333;">
+    <h2 style="color: white;">All the journeys:</h2>
+  </div>
+  <br>
+  <hr>
+  <div>
+    <style>
+      th {
+        text-align: left;
+      } 
+    </style>
+    <table >
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Start-date</th>
+        <th>End-date</th>
+        <th>Departure-Country</th>
+        <th>Destination-Country</th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tr *ngFor="let travel of travels">
+        <td>{{travel.id}}</td>
+        <td>{{travel.name}}</td>
+        <td>{{travel.start_date}}</td>
+        <td>{{travel.end_date}}</td>
+        <td>{{travel.departure_country}}</td>
+        <td>{{travel.destination_country}}</td>
+
+        <td><form (ngSubmit)="connect1()"><button type="submit" 
+          style="font-size: medium;background-color: lightseagreen;">Update</button></form></td>
+
+        <td><form (ngSubmit)="deleteNow(travel.id)"><button type="submit" 
+          style="background-color:lightcoral;font-size: medium;">Delete</button></form></td>
+      </tr>
+    </table>
+  </div>
+  <br>
+  <div>
+      <form (ngSubmit)="connect()">
+        <button type="submit" style="font-size: medium;">Back</button>
+      </form>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<div style="background-color: powderblue;">
+  <div style="background-color:#333;" >
+    <h2 style="color: white;">Sign In</h2>
+  </div>
+  <br>
+  <hr>
+  <div>
+    <style>
+      a:hover{
+        color: mediumseagreen;
+      }
+    </style>
+
+    <form (ngSubmit)="getByIdNow(user.uusername)">
+      <label for="uusername"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" [(ngModel)]="user.uusername"
+      name="uusername" required><br>
+
+      <label for="upassword"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" [(ngModel)]="user.upassword"
+      name="upassword" required><br>
+
+      <p style="color: red;">{{message1}}</p>
+
+      <button style="background-color:mediumseagreen;font-size: medium;" 
+      type="submit">Sign-in</button><br>
+      <br>
+
+      <a href="/forgetpassword"  style="color: lightseagreen;">Forget password</a>
+    </form>
+  </div>
+  <br>
+  <div>
+    <form (ngSubmit)="connect1()">
+      <button type="submit" style="font-size: medium;">Cancel</button>
+    </form>
+  </div>
+  <br>
+</div>
